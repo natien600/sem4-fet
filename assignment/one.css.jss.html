@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,6 +46,20 @@
             background-color: #0056b3;
         }
     </style>
+
+    <script>
+        function showUserInfo() {
+            let name = prompt("Enter your name:");
+            
+            if (name !== null && name !== "") {
+                alert("Hello " + name + "!");
+                document.getElementById("demo").innerHTML =
+                    "Hello " + name + "! Current date and time is: " + new Date();
+            } else {
+                alert("You did not enter a name.");
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -59,10 +74,12 @@
         and professionally. I believe in hard work, consistency, and always staying positive 
         while facing challenges.
     </p>
-    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
 
-<p id="demo"></p>
+    <button type="button" onclick="showUserInfo()">
+        Click me
+    </button>
+
+    <p id="demo"></p>
 
     <p>
         <a href="../assignment/one.html">Return to without css</a>
@@ -74,3 +91,4 @@ Click me to display Date and Time.</button>
 
 </body>
 </html>
+```
