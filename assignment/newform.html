@@ -10,7 +10,7 @@
             text-align: center;
         }
 
-        form {
+        .container {
             background: white;
             padding: 20px;
             margin: auto;
@@ -46,20 +46,18 @@
 
     <h2>Registration Form</h2>
 
-    <form id="myForm" onsubmit="return false;">
+    <div class="container">
     
-        <label for="name">Name:</label><br>
+        <label>Name:</label><br>
         <input 
             type="text" 
             id="name" 
-            name="name" 
             pattern="[A-Za-z ]+" 
-            title="Only letters allowed (no numbers)" 
-            required>
+            title="Only letters allowed (no numbers)">
         <br>
 
-        <label for="course">Select Course:</label><br>
-        <select id="course" name="course" required>
+        <label>Select Course:</label><br>
+        <select id="course">
             <option value="">--Select an option--</option>
             <option value="HTML">HTML</option>
             <option value="CSS">CSS</option>
@@ -67,12 +65,10 @@
         </select>
         <br>
 
-        <!-- Display Button -->
         <button onclick="displayData()">Display</button>
 
-    </form>
+    </div>
 
-    <!-- Output -->
     <div id="result"></div>
 
     <script>
