@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form>
+        <!-- Name (Only letters allowed) -->
+        <label for="name">Name:</label><br>
+        <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            pattern="[A-Za-z ]+" 
+            title="Please enter only letters (no numbers)" 
+            required>
+        <br><br>
+
+        <!-- Select (Required) -->
+        <label for="course">Select Course:</label><br>
+        <select id="course" name="course" required>
+            <option value="">--Select an option--</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
