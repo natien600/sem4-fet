@@ -18,21 +18,26 @@
             border-radius: 8px;
         }
 
-        input, select {
+        input, select, button {
             width: 90%;
             padding: 8px;
             margin: 8px 0;
         }
 
-        input[type="submit"] {
-            background-color: #28a745;
+        button {
+            background-color: #007bff;
             color: white;
             border: none;
             cursor: pointer;
         }
 
-        input[type="submit"]:hover {
-            background-color: #218838;
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
         }
     </style>
 
@@ -41,7 +46,7 @@
 
     <h2>Registration Form</h2>
 
-    <form>
+    <form id="myForm" onsubmit="return false;">
     
         <label for="name">Name:</label><br>
         <input 
@@ -56,14 +61,34 @@
         <label for="course">Select Course:</label><br>
         <select id="course" name="course" required>
             <option value="">--Select an option--</option>
-            <option value="html">HTML</option>
-            <option value="css">CSS</option>
-            <option value="js">JavaScript</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
         </select>
         <br>
 
-        <input type="submit" value="Submit">
+        <!-- Display Button -->
+        <button onclick="displayData()">Display</button>
+
     </form>
+
+    <!-- Output -->
+    <div id="result"></div>
+
+    <script>
+        function displayData() {
+            let name = document.getElementById("name").value;
+            let course = document.getElementById("course").value;
+
+            if (name === "" || course === "") {
+                alert("Please fill all fields");
+                return;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Name: " + name + "<br>Selected Course: " + course;
+        }
+    </script>
 
 </body>
 </html>
