@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OL and UL Example</title>
+
+    <link rel="stylesheet" href="5.css">
+</head>
+
+<body>
+
+    <h1>My Lists Example</h1>
+
+    <button onclick="showMessage()">Click Me</button>
+
+    <ol>
+        <li>Frontend Development
+            <ul>
+                <li onclick="changeColor(this)">HTML</li>
+                <li onclick="changeColor(this)">CSS</li>
+                <li onclick="changeColor(this)">JavaScript</li>
+            </ul>
+        </li>
+
+        <li>Tools
+            <ul>
+                <li onclick="changeColor(this)">Git</li>
+                <li onclick="changeColor(this)">GitHub</li>
+                <li onclick="changeColor(this)">VS Code</li>
+            </ul>
+        </li>
+    </ol>
+
+    <p><a href="../assignment/home.html">Return to Home Page</a></p>
+
+    <p>
+        <a href="../assignment/ol.html">Return to Without CSS</a>
+    </p>
+
+    <script>
+        // Show popup message
+        function showMessage() {
+            alert("Welcome to My List Example!");
+        }
+
+        // Change text color when clicked
+        function changeColor(element) {
+            element.style.color = "blue";
+            element.style.fontWeight = "bold";
+        }
+    </script>
+
+</body>
+</html>
