@@ -84,7 +84,7 @@ button:hover{
 </head>
 <body>
 <div class="container">
-    <h1>🔐 System Login</h1>
+    <h1>System Login</h1>
     <h3 id="status">Enter Password</h3>
     <input type="password"
     id="password"
@@ -108,7 +108,7 @@ btn.addEventListener("click", function(){
     do{
         let password = passwordInput.value;
         if(password === "@123"){
-            statusText.textContent ="✅ Login Successful!";
+            statusText.textContent ="Login Successful!";
             statusText.style.color = "green";
             btn.disabled = true;
             passwordInput.disabled = true;
@@ -118,12 +118,12 @@ btn.addEventListener("click", function(){
             attempts--;
             attemptsText.textContent =`Attempts Left : ${attempts}`;
             if(attempts > 0){
-                statusText.textContent ="❌ Wrong Password!";
+                statusText.textContent =" Wrong Password!";
                 statusText.style.color = "red";
                 passwordInput.value = "";
             }
             else{
-                statusText.textContent ="🚫 Login Failed!";
+                statusText.textContent =" Login Failed!";
                 statusText.style.color = "red";
                 btn.disabled = true;
                 passwordInput.disabled = true;
