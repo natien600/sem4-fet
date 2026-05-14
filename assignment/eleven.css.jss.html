@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Z-Index Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 250px;
+            margin: auto;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 150px;
+            border-radius: 10px;
+        }
+
+        #box1 {
+            background: red;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        #box2 {
+            background: blue;
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Manipulating CSS with JavaScript (z-index)</h2>
+
+    <div class="container">
+        <div id="box1" class="box">Box 1</div>
+        <div id="box2" class="box">Box 2</div>
+    </div>
+
+    <button onclick="changeStack()">Change Stack Order</button>
+
+    <script>
+        function changeStack() {
+            let box1 = document.getElementById("box1");
+            let box2 = document.getElementById("box2");
+
+            let temp = box1.style.zIndex;
+            box1.style.zIndex = box2.style.zIndex;
+            box2.style.zIndex = temp;
+
+            alert("Stack order changed!");
+        }
+    </script>
+
+</body>
+</html>
